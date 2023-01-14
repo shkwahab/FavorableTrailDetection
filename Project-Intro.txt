@@ -1,0 +1,13 @@
+The project takes in an input of the number of trails, number of connections between the trails, and the starting trail. It also takes the name of each trail and the distance of each trail.
+
+The program uses a vector to store the graph of trails and their connections. The vector is implemented as an adjacency list, where each trail is represented as an index in the vector, and the connections to other trails are stored as a pair of the trail's index and the difficulty level of the connection.
+
+The function bellman_ford() takes in the number of trails, number of connections, the starting trail, the distance array and the name of the trails as input. It initializes the distance to the source trail as 0 and the distance to all other trails as their initial distance. It then uses the Bellman-Ford algorithm to find the shortest difficulty level between all trails.
+
+The algorithm is run for V-1 iterations, where V is the number of trails. In each iteration, the distance to each trail is updated by relaxing all edges in the graph. Relaxation is the process of checking if the distance to the current trail plus the difficulty level of the connection is less than the current distance to the connected trail, if so, the distance to the connected trail is updated.
+
+The program also checks for negative cycles in the graph. If a negative cycle is detected, the program prints a message indicating that the graph contains a negative cycle. If no negative cycle is detected, the program prints the final distance and the shortest difficulty level from source trail to all other trails.
+
+In the main function, it takes the input of number of trails, number of connections, and the starting trail and calls the bellman_ford function to find the shortest difficulty level.
+
+In summary, the above code takes an input of a graph of trails and their connections and the distance of each trail and finds the shortest difficulty level between all trails using Bellman-Ford algorithm.
